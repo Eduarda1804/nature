@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Nature</title>
+    <link rel="short icon" href="../imagens/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../estilos/layout.css">
+    <link rel="stylesheet" type="text/css" href="../estilos/formulario.css">
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="../imagens/logo.png" alt="Logo Nature">
+        </figure>
+        <h1>Nature</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+
+            <li>
+                <a href="../paginas/plantas.html">Plantas</a>
+                <ul>
+                    <li><a href="../paginas/flores.html">Flores</a></li>
+                    <li><a href="../paginas/comoPlantar.html">Como plantar</a></li>
+                    <li><a href="../paginas/cuidados.html">Cuidados</a></li>
+                </ul>
+            </li>
+            <li><a href="../paginas/sobre.html">Sobre o mim</a></li>
+            <li><a href="../paginas/cadastro.html" class="ativo">Cadastro</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Quer saber mais sobre?</h1>
+        <p>Cadastre para participar do nosso curso e ser um cuidador de planta profissional</p>
+        <form id="formulario" action="respFormulario.html" method="post">
+            <fieldset>
+                <legend>Formulário de Cadastro</legend>
+                <label for="lbNome">Nome:</label>
+                <input id="ipNome" name="Nome" type="text" placeholder="Seu nome" required>
+
+                <label for="lbEmail">Email:</label>
+                <input id="ipEmail" name="iEmail" type="email" placeholder="exemplo@gmail.com" required>
+
+                <label for="lbTelefone">Telefone:</label>
+                <input id="ipTelefone" name="telefone" type="tel" placeholder="(11) 91234-5678" required>
+
+                <label for="lbDtNascimento">Data de Nascimento</label>
+                <input id="ipDtNascimento" name="DtNascimento" type="date" required>
+
+                <label for="lbNivel">Qual seu nível de experiência com plantas?</label>
+                <select id="slNivel" name="slNivel">
+                    <option value="iniciante">Iniciante</option>
+                    <option value="intermediario">Intermediário</option>
+                    <option value="avancado">Avançado</option>
+                </select>
+
+                <label for="lbMensagem">Qual seu tipo de planta favorito?</label>
+                <textarea id="taMensagem" name="taMensagem" type="text" placeholder="Eu gosto de Manjericão porque é fácil de cuidar."  rows="5"></textarea>
+
+                <button type="button" onclick="mostrarDadosForm(event)">Enviar</button>
+                <button type="button" onclick="limparDados()">Limpar</button>
+
+            </fieldset>
+
+        </form>
+
+        <section>
+            <h2 id="resposta">Olá, confira os dados informados:</h2>
+            <br>
+            <p id="pNome"></p>
+            <p id="pEmail"></p>
+            <p id="pTelefone"></p>
+            <p id="pData"></p>
+            <p id="pNivel"></p>
+            <p id="pMensagem"></p>
+        </section>
+
+    </main>
+    <footer>
+        <address>Contato: nature@email.com</address>
+        <p>Desenvolvido por Eduarda Mary &copy;2026</p>
+    </footer>
+    <script src="../scripts/enviarDadosForm.js"></script>
+</body>
+
+</html>

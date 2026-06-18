@@ -1,0 +1,120 @@
+#formulario {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #5C6A56;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px #475743;
+}
+
+fieldset {
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+}
+
+fieldset legend {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+button,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 2px solid #7f9a85;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+button{
+    background-color: #7c4c2e;
+    color: #fff;
+    font-size: 15px;
+    padding: 14px 20px;
+    font-weight: bold;
+    border: 1px solid #000;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ccc;
+    color: #100f0f;
+}
+
+section {
+    width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px #475743;
+    display: block;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #7c4c2e;
+}
+
+section p {
+    margin: 10px 0;
+    text-align: left;
+}
+
+@media (min-width: 992px) {
+    #formulario {
+        max-width: 400px;
+    }
+
+    section {
+        width: 500px;
+    }
+}
+
+@media (max-width: 767px) {
+    #formulario {
+        width: 90%;
+        max-width: 400px;
+        margin: 30px auto;
+        padding: 15px;
+    }
+
+    section {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    fieldset {
+        margin: 5px;
+        padding: 8px;
+    }
+
+    fieldset legend {
+        font-size: 18px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    button,
+    select,
+    textarea,
+    input[type="submit"] {
+        font-size: 16px;
+    }
+}

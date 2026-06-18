@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "main aside"
+        "footer footer";
+    gap: 25px;
+    padding: 0 25px 0 220px;
+    margin: 0;
+    align-items: start;
+    overflow-x: hidden;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+main>h1 {
+    text-align: center;
+    margin: 0 0 25px;
+    color: #000;
+}
+
+main section {
+    width: 100%;
+}
+
+main section article {
+    width: 100%;
+    max-width: 700px;
+}
+
+main section article figure {
+    width: 100%;
+    max-width: 700px;
+}
+
+aside {
+    grid-area: aside;
+    width: 100%;
+    margin: 143px 0 0 0;
+    padding: 20px;
+    color: #343d23;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px #475743;
+}
+
+aside h2 {
+    color: #475743;
+    margin-bottom: 8px;
+    font-size: 20px;
+    border-bottom: 2px solid #f57d55;
+}
+
+aside p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+footer {
+    grid-area: footer;
+    margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "titulo"
+            "main"
+            "aside"
+            "footer";
+          gap: 0; 
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+
+    body{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "titulo"
+            "main"
+            "aside"
+            "footer";
+          gap: 0;  
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    main > h1 {
+        width: 100%;
+        margin: 25px 0 20px;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    main section {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main section article {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    main section article figure {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    aside {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    aside h2 {
+        font-size: 18px;
+    }
+
+    aside p {
+        font-size: 14px;
+    }
+
+    footer {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
